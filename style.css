@@ -97,6 +97,7 @@ body {
 }
 
 .product__ilustra {
+  z-index: 2;
   width: 28vw;
   right: 10vw;
   bottom: -10vw;
@@ -116,7 +117,79 @@ body {
   margin-right: 1.75rem;
 }
 
+/* Section: Testimonial */
+.testimonial {
+  width: 100vw;
+  height: 100vh;
+  padding: 30rem 0;
+  transform: skewY(-10deg);
+  background-color: #f7faff;
+}
+
+.testimonial__label,
+.testimonial__quote,
+.testimonial__author,
+.testimonial__screenshot {
+  transform: skewY(10deg);
+}
+
+.testimonial__label {
+  font-size: 1.3vw;
+  text-align: center;
+  margin-bottom: 4.75rem;
+  position: relative;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.testimonial__label:after {
+  left: 50%;
+  content: '';
+  height: 5px;
+  bottom: -2rem;
+  width: 4.25rem;
+  border-radius: 3px;
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: var(--color-secondary);
+}
+
+.testimonial__quote {
+  width: 39%;
+  color: #888;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.8vw;
+  font-style: italic;
+  text-align: center;
+}
+
+.testimonial__quote--highlight {
+  color: var(--color-primary);
+}
+
+.testimonial__author {
+  font-size: 1.5vw;
+  margin-top: 1.25rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.testimonial__screenshot {
+  width: 55vw;
+  display: block;
+  margin: 0 auto;
+  border-radius: 3px;
+  margin-top: 10rem;
+  box-shadow: 0.1rem 0.5rem 1.8rem rgba(0, 0, 0, 0.1);
+}
+
 @media only screen and (max-width: 768px) {
+  .header__line {
+    height: 0.5rem;
+  }
+
   .header__logo {
     width: 20vw;
   }
@@ -161,5 +234,34 @@ body {
 
   .icon {
     width: 7vw;
+  }
+
+  .testimonial {
+    padding: 15vw 0;
+  }
+
+  .testimonial__screenshot {
+    width: 70vw;
+    margin-top: 5rem;
+  }
+
+  .testimonial__label {
+    font-size: 1.8vw;
+    margin-bottom: 2rem;
+  }
+
+  .testimonial__label:after {
+    height: 3px;
+    width: 2.5rem;
+    bottom: -0.8rem;
+  }
+
+  .testimonial__quote {
+    width: 80%;
+    font-size: 3.2vw;
+  }
+
+  .testimonial__author {
+    font-size: 2.5vw;
   }
 }
