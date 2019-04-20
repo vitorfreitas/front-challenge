@@ -24,6 +24,17 @@ const gridOptions = {
   gridItems
 };
 
+const inputs = {
+  name: {
+    selector: '#name',
+    rule: /[a-zA-Z]+/
+  },
+  email: {
+    selector: '#email',
+    rule: /^\w+([\.-]?\w+)+@\w+([\.:]?\w+)+(\.[a-zA-Z0-9]{2,3})+$/
+  }
+};
+
 function changeCurrentActiveItem(ev) {
   document
     .querySelector('.grid__option--active')
@@ -39,6 +50,8 @@ window.onload = function() {
   const grid = new GridFilter(gridOptions);
   grid.setupGridItems();
 
+  const form = new FormBuilder(inputs);
+
   document.querySelectorAll('.grid__option').forEach(el => {
     el.addEventListener('click', e => {
       const color = e.srcElement.innerText.toLowerCase();
@@ -46,5 +59,10 @@ window.onload = function() {
       changeCurrentActiveItem(e);
       grid.displayItemsByColor(color);
     });
+  });
+
+  document.querySelector('#submit').addEventListener('click', e => {
+    e.preventDefault();
+    form.submit();
   });
 };
