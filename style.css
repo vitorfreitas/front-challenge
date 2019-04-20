@@ -478,6 +478,7 @@ body {
   /* ------------------- */
   /* Section: Product */
   /* ------------------- */
+  .grid__label,
   .try__label,
   .product__label {
     font-size: 1.8vw;
@@ -485,6 +486,7 @@ body {
     margin-bottom: 2rem;
   }
 
+  .grid__label:after,
   .try__label:after,
   .product__label:after {
     left: 50%;
@@ -549,6 +551,17 @@ body {
     font-size: 2.5vw;
   }
 
+  /* Section: Grid */
+  .grid__options {
+    margin: 2rem 0;
+  }
+
+  .grid__container {
+    padding: 0 4rem;
+    grid-gap: 1rem;
+    grid-template-rows: repeat(13, 3vw);
+  }
+
   /* ------------------- */
   /* Section: Try */
   /* ------------------- */
@@ -602,6 +615,16 @@ body {
 }
 
 @media only screen and (max-width: 375px) {
+  /* ---------------- */
+  /* Section: Grid */
+  /* ---------------- */
+  .grid__option {
+    margin: 0;
+    padding: 1.5rem 6rem;
+    display: block;
+    text-align: center;
+  }
+
   /* ---------------- */
   /* Section: Try */
   /* ---------------- */
