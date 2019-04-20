@@ -235,7 +235,6 @@ body {
 .grid__options {
   margin: 5rem auto;
   border-radius: 2px;
-  border: 0.3rem solid #f8f8f8;
 }
 
 .grid__option {
@@ -281,54 +280,6 @@ body {
   height: 100%;
   border-radius: 3px;
   background-color: #fcd7db;
-}
-
-.grid__item--1 {
-  grid-row: 1 / 6;
-}
-
-.grid__item--2 {
-  grid-row: 1 / 5;
-}
-
-.grid__item--3 {
-  grid-row: 1 / 6;
-}
-
-.grid__item--4 {
-  grid-row: 1 / 5;
-}
-
-.grid__item--5 {
-  grid-row: 6 / 10;
-}
-
-.grid__item--6 {
-  grid-row: 5 / 9;
-}
-
-.grid__item--7 {
-  grid-row: 6 / 10;
-}
-
-.grid__item--8 {
-  grid-row: 5 / 9;
-}
-
-.grid__item--9 {
-  grid-row: 10 / -1;
-}
-
-.grid__item--10 {
-  grid-row: 9 / 13;
-}
-
-.grid__item--11 {
-  grid-row: 10 / -1;
-}
-
-.grid__item--12 {
-  grid-row: 9 / 13;
 }
 
 /* ------------------- */
