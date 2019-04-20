@@ -23,8 +23,9 @@ body {
   box-sizing: border-box;
 }
 
-/* Header w/ logo */
-
+/* ------------------- */
+/* Header */
+/* ------------------- */
 .header {
   display: flex;
   padding: 12vw 0;
@@ -58,7 +59,9 @@ body {
   color: var(--color-primary);
 }
 
+/* ------------------- */
 /* Section: Product */
+/* ------------------- */
 .product {
   padding: 0 8vw;
   position: relative;
@@ -118,7 +121,9 @@ body {
   margin-right: 1.75rem;
 }
 
+/* ------------------- */
 /* Section: Testimonial */
+/* ------------------- */
 .testimonial {
   width: 100vw;
   padding: 30rem 0 15rem 0;
@@ -185,8 +190,11 @@ body {
   box-shadow: 0.1rem 0.5rem 1.8rem rgba(0, 0, 0, 0.1);
 }
 
+/* ------------------- */
+/* Section: grid */
+/* ------------------- */
 .grid {
-  padding-bottom: 2rem;
+  padding-bottom: 15vw;
 }
 
 .grid__label {
@@ -322,7 +330,117 @@ body {
   grid-row: 9 / 13;
 }
 
+/* ------------------- */
+/* Section: try */
+/* ------------------- */
+.try {
+  width: 80%;
+  height: 40vw;
+  position: absolute;
+  background-color: var(--color-primary);
+}
+
+.try__label {
+  font-size: 1.3vw;
+  text-align: right;
+  margin-bottom: 4vw;
+  position: relative;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.try__label:after {
+  right: 0;
+  content: '';
+  height: 5px;
+  bottom: -1.5rem;
+  width: 3rem;
+  border-radius: 3px;
+  position: absolute;
+  background-color: #fff;
+}
+
+.try__left {
+  padding: 7vw 24vw 7vw 13vw;
+  background-color: var(--color-primary);
+}
+
+.try__title {
+  font-size: 4.4vw;
+  text-align: right;
+  color: #fff;
+}
+
+.try__paragraph {
+  margin-top: 2vw;
+  color: #fff;
+  font-size: 1.6vw;
+  text-align: right;
+}
+
+.try__right {
+  top: 50%;
+  width: 34vw;
+  height: 23vw;
+  right: -15vw;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: translateY(-50%);
+  justify-content: space-between;
+
+  padding: 3.5vw;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.try__input-label,
+.try__input {
+  display: block;
+}
+
+.try__input-label {
+  font-weight: bold;
+  font-size: 1.2vw;
+  margin-bottom: 0.7rem;
+}
+
+.try__input {
+  width: 100%;
+  color: #aaa;
+  font-size: 1.2vw;
+  padding: 0.8vw 1vw;
+  border-radius: 2px;
+  border: 1.7px solid #ddd;
+}
+
+.try__input::placeholder {
+  color: #aaa;
+}
+
+.try__button {
+  color: #fff;
+  font-size: 1.2vw;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.2s;
+  text-decoration: none;
+  padding: 0.6vw 1.2vw;
+  background-color: #98bf49;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.try__button:hover {
+  background-color: #79983a;
+}
+
 @media only screen and (max-width: 768px) {
+  /* ------------------- */
+  /* Header */
+  /* ------------------- */
   .header__line {
     height: 0.5rem;
   }
@@ -336,12 +454,17 @@ body {
     font-size: 8.25vw;
   }
 
+  /* ------------------- */
+  /* Section: Product */
+  /* ------------------- */
+  .try__label,
   .product__label {
     font-size: 1.8vw;
     text-align: center;
     margin-bottom: 2rem;
   }
 
+  .try__label:after,
   .product__label:after {
     left: 50%;
     height: 3px;
@@ -373,6 +496,9 @@ body {
     width: 7vw;
   }
 
+  /* ------------------- */
+  /* Section: Testimonial */
+  /* ------------------- */
   .testimonial {
     padding: 15vw 0;
   }
@@ -400,5 +526,63 @@ body {
 
   .testimonial__author {
     font-size: 2.5vw;
+  }
+
+  /* ------------------- */
+  /* Section: Try */
+  /* ------------------- */
+  .try {
+    width: 100%;
+  }
+
+  .try__paragraph {
+    font-size: 3vw;
+    margin: 1rem 2rem;
+  }
+
+  .try__title,
+  .try__paragraph,
+  .try__label {
+    text-align: center;
+  }
+
+  .try__left {
+    padding: 2rem 0 0 0;
+  }
+
+  .try__right {
+    left: 0;
+    right: 0;
+    width: 70vw;
+    min-height: 25rem;
+    margin: 4rem auto;
+    transform: translate(0, 0);
+  }
+
+  .try__input-label {
+    font-size: 1.25rem;
+  }
+
+  .try__input {
+    font-size: 1.6rem;
+  }
+
+  .try__button {
+    padding: 0.6rem 1rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .try__left {
+    height: 150%;
+  }
+
+  .try__right {
+    min-height: 18rem;
+  }
+
+  .try__input {
+    font-size: 1.4rem;
   }
 }
