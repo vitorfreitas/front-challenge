@@ -336,7 +336,7 @@ body {
 .try {
   width: 80%;
   height: 40vw;
-  position: absolute;
+  position: relative;
   background-color: var(--color-primary);
 }
 
@@ -435,6 +435,27 @@ body {
 
 .try__button:hover {
   background-color: #79983a;
+}
+
+/* ------------ */
+/* FOOTER */
+/* ------------ */
+.footer {
+  padding: 10vw 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__frontend,
+.footer__title {
+  font-size: 2.5vw;
+  font-style: italic;
+}
+
+.footer__frontend {
+  margin-top: 2vw;
+  font-weight: 300;
 }
 
 @media only screen and (max-width: 768px) {
@@ -571,9 +592,19 @@ body {
     padding: 0.6rem 1rem;
     font-size: 1.25rem;
   }
+
+  /* ---------- */
+  /* FOOTER */
+  /* ---------- */
+  .footer {
+    padding: 30vw 0 10vw 0;
+  }
 }
 
 @media only screen and (max-width: 375px) {
+  /* ---------------- */
+  /* Section: Try */
+  /* ---------------- */
   .try__left {
     height: 150%;
   }
@@ -584,5 +615,21 @@ body {
 
   .try__input {
     font-size: 1.4rem;
+  }
+
+  /* ---------- */
+  /* FOOTER */
+  /* ---------- */
+  .footer {
+    padding: 50vw 0 20vw 0;
+  }
+
+  .footer__logo {
+    width: 20vw;
+  }
+
+  .footer__frontend,
+  .footer__title {
+    font-size: 5vw;
   }
 }
